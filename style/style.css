@@ -1,0 +1,399 @@
+
+/*//////////
+//CSS reset
+//////////*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	/*list-style: none;*/
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*//////////
+// FONTS
+//////////*/
+
+@font-face{
+	font-family: monaco;
+	src: url(Monaco.ttf);
+}
+
+
+/*//////////////
+// DIV ELEMENTS
+/////////////*/
+
+
+html,body{
+	background:#262626;
+	width: 100%;
+	height: 100%;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+
+header{
+	background:#191A16;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 64px;
+	border-bottom: 1px;
+	border-color: #444;
+	border-style: solid;
+	overflow: hidden;
+	z-index: 1000;
+
+	background: -webkit-linear-gradient(#222, #111); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#222, #111); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#222, #111); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#222, #111); /* Standard syntax */
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+section#wrapper{
+	background: #262626;
+	position: absolute;
+	top: 65px;
+	width: 100%;
+	height: 100%;
+}
+
+nav.sideBar{
+	position: fixed;
+	top: 64px;
+	bottom: 0px;
+	background:#E6E6E6;
+	width: 200px;
+	border-right: 2px;
+	border-color: #999;
+	border-style: solid;
+	overflow-y:scroll;
+	z-index: 10;
+}
+
+#tree{
+	margin: 5px;
+}
+
+section#code{
+	margin-left: 202px;
+	height: 100%;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.CodeMirror {
+  font-family: monaco, sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+  min-width: 100%;
+  display: inline-block;
+
+
+}
+
+.CodeMirror-scroll{
+	overflow: hidden;
+}
+
+
+
+#canvasWrapper{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -120px;
+	background-color: #FFF;
+	z-index: 11;
+	line-height: 2.0;
+}
+
+canvas#p5Window{
+	display: block;
+	outline: none;
+}
+
+#overlay{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(39,40,34,0.8);
+	z-index: 10;
+}
+
+/*//////////////
+// other elements
+/////////////*/
+
+h1.logo{
+
+	display: inline-block;
+	vertical-align: middle;
+	background:url("logo.png");
+	width: 184px;
+	height: 64px;
+
+}
+
+.dynamicLogo{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0px 28px 0 50px
+}
+
+.button{
+	display: inline-block;
+	vertical-align: MIDDLE;
+	background-repeat: no-repeat;
+	background: url("eeboodIcons.png");
+	cursor: pointer;
+	width: 64px;
+	height: 64px;
+	overflow: hidden;
+}
+
+.disabledButton{
+	 -khtml-opacity:.30;
+	 -moz-opacity:.30;
+	 -ms-filter:"alpha(opacity=30)";
+	  filter:alpha(opacity=30);
+	  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.3);
+	  opacity:.30;
+}
+
+
+#play_button{
+	background-position: 0px 0px;
+}
+
+#stop_button{
+	background-position: -64px 0px;
+}
+
+#new_button{
+	background-position: -128px 0px;
+}
+
+#help_button{
+	background-position: -196px 0px;
+}
+
+#ref_button{
+	background-position: -256px 0px;
+}
+
+#save_button{
+	background-position: -320px 0px;
+}
+
+#sideBar_button{
+	background-position: -384px 0px;
+}
+
+
+
+#tooltip{
+	color: #EEE;
+	display: inline-block;
+	vertical-align: MIDDLE;
+	margin: 0 0 0 16px;
+}
+
+
+
+
+/*//////////////
+// TREE VIEW
+/////////////*/
+
+
+.css-treeview ul,
+.css-treeview li
+{
+    padding: 2px;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+    color: #888;
+}
+
+.css-treeview input
+{
+    position: absolute;
+    opacity: 0;
+}
+
+.css-treeview
+{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.css-treeview a
+{
+    color: #333;
+    text-decoration: none;
+    padding-left:18px;
+}
+
+.css-treeview a:hover
+{
+    color: #000;
+}
+
+.css-treeview input + label + ul
+{
+    margin: 0 0 0 22px;
+}
+
+.css-treeview a
+{
+    margin: 0 0 0 18px;
+}
+
+.css-treeview input ~ ul
+{
+    display: none;
+}
+
+.css-treeview label,
+.css-treeview label::before
+{
+    cursor: pointer;
+}
+
+.css-treeview input:disabled + label
+{
+    cursor: default;
+    opacity: .6;
+}
+
+.css-treeview input:checked:not(:disabled) ~ ul
+{
+    display: block;
+}
+
+.css-treeview label,
+.css-treeview a,
+.css-treeview label::before
+{
+    background: url("treeViewIcons_BW.png") no-repeat;
+}
+
+.css-treeview label,
+.css-treeview a,
+.css-treeview label::before
+{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+
+
+.css-treeview label
+{
+    background-position: 18px 0;
+}
+
+.css-treeview label::before
+{
+    content: "";
+    width: 16px;
+    margin: 0 22px 0 0;
+    vertical-align: middle;
+    background-position: 0 -16px;
+}
+
+.css-treeview a{
+	background-position: 0px -48px;
+}
+
+.currentFile{
+	color:#369!important;
+}
+
+.css-treeview input:checked + label::before
+{
+    background-position: 0 -32px;
+}
+
+/* webkit adjacent element selector bugfix */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+    .css-treeview
+    {
+        -webkit-animation: webkit-adjacent-element-selector-bugfix infinite 1s;
+    }
+
+    @-webkit-keyframes webkit-adjacent-element-selector-bugfix
+    {
+        from
+        {
+            padding: 0;
+        }
+        to
+        {
+            padding: 0;
+        }
+    }
+}
