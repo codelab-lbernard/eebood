@@ -288,7 +288,7 @@ $(document).ready(function(){
   });
 
 
-  readFile("sketches/readme.txt");
+  readFile("readme/readme.txt");
 
   function readFile(filename) {
 

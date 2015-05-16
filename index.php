@@ -95,11 +95,29 @@ function is_hidden($entry) {
         && $entry != '..';  # Ignore parent directory.
 }
 
-$onetofour = __DIR__ . '/sketches/onetofour';
-$onetofour_entries = get_grouped_entries($onetofour);
+$drawing = __DIR__ . '/sketches/drawing';
+$drawing_entries = get_grouped_entries($drawing);
 
-$fourtoeight = __DIR__ . '/sketches/fourtoeight';
-$fourtoeight_entries = get_grouped_entries($fourtoeight);
+$color = __DIR__ . '/sketches/color';
+$color_entries = get_grouped_entries($color);
+
+$conditional = __DIR__ . '/sketches/conditional';
+$conditional_entries = get_grouped_entries($conditional);
+
+$forLoop = __DIR__ . '/sketches/forLoop';
+$forLoop_entries = get_grouped_entries($forLoop);
+
+$math = __DIR__ . '/sketches/math';
+$math_entries = get_grouped_entries($math);
+
+$timepiece = __DIR__ . '/sketches/timepiece';
+$timepiece_entries = get_grouped_entries($timepiece);
+
+$variables = __DIR__ . '/sketches/variables';
+$variables_entries = get_grouped_entries($variables);
+
+$timepiece = __DIR__ . '/sketches/timepiece';
+$timepiece_entries = get_grouped_entries($timepiece);
 ?>
 
 
@@ -155,32 +173,100 @@ $fourtoeight_entries = get_grouped_entries($fourtoeight);
 	            <li ><a class="file currentFile" href="readme/readme.txt">README</a></li>
 
 	            <li>
-	              <input type="checkbox" id="item-0" /><label for="item-0">Week 1 to 4</label>
+	              <input type="checkbox" id="item-0" /><label for="item-0">drawing</label>
 	              <ul>
-					<?php
-						foreach ($onetofour_entries as $entry => $is_dir) {
-						    $escaped_entry = htmlspecialchars($entry);
-						    if($escaped_entry != ".DS_Store" && $escaped_entry != ".."){
-						    	printf('<li ><a class="file" href="sketches/onetofour/%s">%s</a></li>' . "\n",$escaped_entry,$escaped_entry);	
-						    }
-						    
-						}
-					?>
+        					<?php
+        						foreach ($drawing_entries as $entry => $is_dir) {
+        						    $escaped_entry = htmlspecialchars($entry);
+        						    if($escaped_entry != ".DS_Store" && $escaped_entry != ".."){
+        						    	printf('<li ><a class="file" href="sketches/drawing/%s">%s</a></li>' . "\n",$escaped_entry,$escaped_entry);
+        						    }
+        						}
+        					?>
 	              </ul>
 	            </li>
 
 	            <li>
-	              <input type="checkbox" id="item-1" /><label for="item-1">Week 4 to 8</label>
+	              <input type="checkbox" id="item-1" /><label for="item-1">color</label>
 	              <ul>
-					<?php
-						foreach ($fourtoeight_entries as $entry => $is_dir) {
-						    $escaped_entry = htmlspecialchars($entry);
-						    if($escaped_entry != ".DS_Store" && $escaped_entry != ".."){
-						    	printf('<li ><a class="file" href="sketches/fourtoeight/%s">%s</a></li>' . "\n",$escaped_entry,$escaped_entry);	
-						    }
-						    
-						}
-					?>
+        					<?php
+        						foreach ($color_entries as $entry => $is_dir) {
+        						    $escaped_entry = htmlspecialchars($entry);
+        						    if($escaped_entry != ".DS_Store" && $escaped_entry != ".."){
+        						    	printf('<li ><a class="file" href="sketches/color/%s">%s</a></li>' . "\n",$escaped_entry,$escaped_entry);
+        						    }
+        						}
+        					?>
+	              </ul>
+	            </li>
+
+	            <li>
+	              <input type="checkbox" id="item-2" /><label for="item-2">conditional</label>
+	              <ul>
+        					<?php
+        						foreach ($conditional_entries as $entry => $is_dir) {
+        						    $escaped_entry = htmlspecialchars($entry);
+        						    if($escaped_entry != ".DS_Store" && $escaped_entry != ".."){
+        						    	printf('<li ><a class="file" href="sketches/conditional/%s">%s</a></li>' . "\n",$escaped_entry,$escaped_entry);
+        						    }
+        						}
+        					?>
+	              </ul>
+	            </li>
+
+	            <li>
+	              <input type="checkbox" id="item-3" /><label for="item-3">for loop</label>
+	              <ul>
+        					<?php
+        						foreach ($forLoop_entries as $entry => $is_dir) {
+        						    $escaped_entry = htmlspecialchars($entry);
+        						    if($escaped_entry != ".DS_Store" && $escaped_entry != ".."){
+        						    	printf('<li ><a class="file" href="sketches/forLoop/%s">%s</a></li>' . "\n",$escaped_entry,$escaped_entry);
+        						    }
+        						}
+        					?>
+	              </ul>
+	            </li>
+
+	            <li>
+	              <input type="checkbox" id="item-4" /><label for="item-4">math</label>
+	              <ul>
+        					<?php
+        						foreach ($math_entries as $entry => $is_dir) {
+        						    $escaped_entry = htmlspecialchars($entry);
+        						    if($escaped_entry != ".DS_Store" && $escaped_entry != ".."){
+        						    	printf('<li ><a class="file" href="sketches/math/%s">%s</a></li>' . "\n",$escaped_entry,$escaped_entry);
+        						    }
+        						}
+        					?>
+	              </ul>
+	            </li>
+
+	            <li>
+	              <input type="checkbox" id="item-5" /><label for="item-5">variables</label>
+	              <ul>
+        					<?php
+        						foreach ($variables_entries as $entry => $is_dir) {
+        						    $escaped_entry = htmlspecialchars($entry);
+        						    if($escaped_entry != ".DS_Store" && $escaped_entry != ".."){
+        						    	printf('<li ><a class="file" href="sketches/variables/%s">%s</a></li>' . "\n",$escaped_entry,$escaped_entry);
+        						    }
+        						}
+        					?>
+	              </ul>
+	            </li>
+
+	            <li>
+	              <input type="checkbox" id="item-6" /><label for="item-6">timepiece</label>
+	              <ul>
+        					<?php
+        						foreach ($timepiece_entries as $entry => $is_dir) {
+        						    $escaped_entry = htmlspecialchars($entry);
+        						    if($escaped_entry != ".DS_Store" && $escaped_entry != ".."){
+        						    	printf('<li ><a class="file" href="sketches/timepiece/%s">%s</a></li>' . "\n",$escaped_entry,$escaped_entry);
+        						    }
+        						}
+        					?>
 	              </ul>
 	            </li>
 
